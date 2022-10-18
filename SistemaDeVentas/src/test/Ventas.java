@@ -15,9 +15,9 @@ public class Ventas {
        Producto p3 = new Producto("Peras",2);
        Producto p4 = new Producto("Atún",5);
        Producto p5 = new Producto("Lomo",3);
-       //es necesario instanciar un objeto de la clase Orden para poder llamar a los métodos que contiene:
-        Orden o1=new Orden();
-       //llamamos al objeto creado 'o1' al método 'agregarProducto' y el objeto que queremos agregar al ArrayList:
+       //es necesario instanciar un objeto de la clase 'Orden' para poder llamar a los métodos que contiene, ya que el ArrayList esta dentro de esta clase:
+        Orden o1=new Orden();//utilizando el constructor vacío
+       //llamamos al objeto creado 'o1' a su método 'agregarProducto' y el objeto que queremos agregar al ArrayList:
        o1.agregarProducto(p1);
        o1.agregarProducto(p2);
        o1.agregarProducto(p3);
