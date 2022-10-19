@@ -23,26 +23,18 @@ public class Orden {
     //Hash Equals:
     
 
-    //ToString
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Orden{idOrden=").append(idOrden);
-        sb.append(", productos=").append(productos);
-        sb.append(", contadorOrdenes=").append(contadorOrdenes);
-        sb.append('}');
-        return sb.toString();
-    }
+    //ToString:
+
     //método:
-    static int cnt=0;
+    static int cnt=1;
     public void agregarProducto(Producto producto){
-      
-        if (cnt<MAX_PRODUCTO){
-            this.productos.add(producto);
+        if (this.productos.size()<MAX_PRODUCTO){
+            this.productos.add(producto);//agrega producto(p1,p2...) al ArrayList productos siempre que no exceda la cantidad max
+        }else{
+            System.out.println("ATENCIÓN:");
+            System.out.println("ORDEN nº"+this.idOrden+": Se superó el máximo de productos por cesta por "+cnt+" producto/s");
             cnt++;
-       }else{
-            System.out.println("ATENCIÓN: Se superó el máximo de productos por cesta");
-       }
+        }
      
     }
     //función:
@@ -54,10 +46,8 @@ public class Orden {
         return sum;
     }
     //método:
-    public void monstrarOrden(){
-       
-     System.out.println("Cesta de la compra: ");
-     System.out.println("Orden "+this.idOrden);
+    public void mostrarOrden(){
+     System.out.println("\nOrden "+this.idOrden);//llamamos al atributo idOrden donde aparece el nº de orden
         for(Object elem:productos){
             System.out.println(elem);
         }
