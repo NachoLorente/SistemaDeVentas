@@ -47,7 +47,7 @@ public class Orden {
     }
     //método:
     public void mostrarOrden(){
-     System.out.println("\nOrden "+this.idOrden);//llamamos al atributo idOrden donde aparece el nº de orden
+     System.out.println("\nORDEN "+this.idOrden);//llamamos al atributo idOrden donde aparece el nº de orden
         for(Object elem:productos){
             System.out.println(elem);
         }
