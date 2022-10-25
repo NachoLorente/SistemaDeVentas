@@ -1,5 +1,7 @@
 package test;
 
+import com.ventas.accesodatos.IAccesoDatos;
+import com.ventas.accesodatos.ImpTxt;
 import dominio.Orden;
 import dominio.Producto;
 import java.util.ArrayList;
@@ -58,5 +60,10 @@ public class Ventas {
        o2.mostrarOrden();
       //Método para el valor total de la compra
       System.out.println("  TOTAL: "+o2.calcularTotal()+"€");
+    
+       
+      String nombreArchivo="Stock.txt";
+      IAccesoDatos invocacion = new ImpTxt();
+      
     }
 }
